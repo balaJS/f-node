@@ -1,8 +1,27 @@
-var http = require ("http");
+var time=0;
 
-http.createServer(function(request,response){
-    response.writeHead(200,{'Content-type':'text/plain'});
-    response.end("Hello god!");
-}).listen(80);
+function myFirstFun(){
+    time+=1;
+    if(time>=5){
+        clearInterval(timer);
+    }
+    console.log(`Run by Love! at ${time} seconds`);
 
-console.log(http);
+}
+
+
+//var timer=setInterval(myFirstFun,1000);   //output line
+
+
+//First p[art is closed
+//_________________________________________________________________________________________________
+
+var bala=function(){
+    console.log("Bala always make stupid things(:-");
+}
+
+function callCustom(functions){
+    functions();
+}
+
+callCustom(bala);
